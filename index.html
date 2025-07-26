@@ -1,53 +1,57 @@
-import React from "react";
-
-export default function ProfilePage() {
-  return (
-    <div className="min-h-screen flex bg-white font-sans">
-      {/* Sidebar */}
-      <div className="w-1/5 flex flex-col items-center justify-center p-6">
-        <div className="text-4xl font-bold text-black">
-          st<span className="text-red-500">.</span>
-        </div>
-        <div className="mt-12 space-y-4 text-lg text-black">
-          <a href="#work" className="hover:underline">work</a>
-          <a href="#about" className="hover:underline">about</a>
-          <a href="#contact" className="hover:underline">contact</a>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="w-4/5 flex items-center justify-center relative p-10">
-        {/* Light red circle with image */}
-        <div className="absolute w-96 h-96 bg-red-100 rounded-full -left-28 top-1/2 transform -translate-y-1/2 overflow-hidden flex items-center justify-center shadow-md">
-          <img
-            src="rahul-taekwondo-photo.jpg" // Rename your uploaded file accordingly
-            alt="Profile"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Text content */}
-        <div className="ml-72 z-10">
-          <p className="text-xl text-gray-800 mb-2">Agent Saha is a</p>
-          <h1 className="text-5xl font-extrabold text-red-500 leading-tight">
-            Political Scientist,<br />
-            Taekwondo Player,<br />
-            IAS Officer
-          </h1>
-          <div className="text-[130px] font-black leading-none text-black -mt-10">
-            &
-          </div>
-
-          {/* Links */}
-          <div className="flex space-x-6 mt-6 text-sm">
-            <a href="#work" className="underline font-medium">view work</a>
-            <a href="#about" className="underline font-medium">view about</a>
-          </div>
-          <p className="text-gray-400 mt-2 text-sm">
-            or continue scrolling for featured projects,<br /> skills, and more!
-          </p>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Saha | Personal Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body class="flex min-h-screen bg-white">
+  <!-- Sidebar -->
+  <div class="w-1/5 flex flex-col items-center justify-center p-6 text-black">
+    <div class="text-4xl font-bold">
+      st<span class="text-red-500">.</span>
     </div>
-  );
-}
+    <div class="mt-12 space-y-4 text-lg">
+      <a href="#work" class="hover:underline">work</a>
+      <a href="#about" class="hover:underline">about</a>
+      <a href="#contact" class="hover:underline">contact</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="w-4/5 flex items-center justify-center relative p-10">
+    <!-- Red Circle with Image -->
+    <div class="absolute w-80 h-80 bg-red-100 rounded-full -left-28 top-1/2 transform -translate-y-1/2 overflow-hidden shadow-lg">
+      <img src="rahul-taekwondo-photo.jpg" alt="Profile" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Text Content -->
+    <div class="ml-64 z-10">
+      <p class="text-xl text-gray-800 mb-2">Agent Saha is a</p>
+      <h1 class="text-5xl font-extrabold text-red-500 leading-tight">
+        Political Scientist,<br />
+        Taekwondo Player,<br />
+        IAS Officer
+      </h1>
+      <div class="text-[130px] font-black leading-none text-black -mt-10">
+        &
+      </div>
+
+      <div class="flex space-x-6 mt-6 text-sm">
+        <a href="#work" class="underline font-medium">view work</a>
+        <a href="#about" class="underline font-medium">view about</a>
+      </div>
+      <p class="text-gray-400 mt-2 text-sm">
+        or continue scrolling for featured projects,<br />
+        skills, and more!
+      </p>
+    </div>
+  </div>
+</body>
+</html>
