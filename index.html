@@ -11,39 +11,49 @@
     }
   </style>
 </head>
-<body class="flex min-h-screen bg-white">
+<body class="bg-white">
+
+  <!-- Mobile Menu Button -->
+  <button id="menuBtn" class="md:hidden fixed top-4 left-4 z-50 bg-white border rounded p-2 shadow">
+    ☰
+  </button>
+
   <!-- Sidebar -->
-  <div class="w-1/5 flex flex-col items-center justify-center p-6 text-black">
+  <aside id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-md p-6 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40">
     <div class="text-4xl font-bold">
       st<span class="text-red-500">.</span>
     </div>
-    <div class="mt-12 space-y-4 text-lg">
-      <a href="#work" class="hover:underline">work</a>
-      <a href="#about" class="hover:underline">about</a>
-      <a href="#contact" class="hover:underline">contact</a>
-    </div>
-  </div>
+    <nav class="mt-12 space-y-4 text-lg">
+      <a href="#work" class="block hover:underline">work</a>
+      <a href="#about" class="block hover:underline">about</a>
+      <a href="#contact" class="block hover:underline">contact</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay for mobile -->
+  <div id="overlay" class="fixed inset-0 bg-black opacity-30 hidden z-30 md:hidden"></div>
 
   <!-- Main Content -->
-  <div class="w-4/5 flex items-center justify-center relative p-10">
+  <main class="md:ml-64 p-6 md:p-10 flex flex-col md:flex-row items-center justify-center min-h-screen relative">
+    
     <!-- Red Circle with Image -->
-    <div class="absolute w-80 h-80 bg-red-100 rounded-full -left-28 top-1/2 transform -translate-y-1/2 overflow-hidden shadow-lg">
-      <img src="rahul-taekwondo-photo.jpg" alt="Profile" class="w-full h-full object-cover" />
+    <div class="w-64 h-64 bg-red-100 rounded-full overflow-hidden shadow-md flex items-center justify-center mb-10 md:mb-0 md:mr-10">
+      <img src="karate.jpg" alt="Agent Saha" class="w-full h-full object-cover" />
     </div>
 
     <!-- Text Content -->
-    <div class="ml-64 z-10">
-      <p class="text-xl text-gray-800 mb-2">Agent Saha is a</p>
-      <h1 class="text-5xl font-extrabold text-red-500 leading-tight">
+    <div class="text-center md:text-left">
+      <p class="text-lg text-gray-800 mb-2">Agent Saha is a</p>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-red-500 leading-tight">
         Political Scientist,<br />
         Taekwondo Player,<br />
         IAS Officer
       </h1>
-      <div class="text-[130px] font-black leading-none text-black -mt-10">
+      <div class="text-[80px] md:text-[120px] font-black leading-none text-black mt-2 md:-mt-8">
         &
       </div>
 
-      <div class="flex space-x-6 mt-6 text-sm">
+      <div class="flex justify-center md:justify-start space-x-6 mt-4 text-sm">
         <a href="#work" class="underline font-medium">view work</a>
         <a href="#about" class="underline font-medium">view about</a>
       </div>
@@ -52,6 +62,23 @@
         skills, and more!
       </p>
     </div>
-  </div>
+  </main>
+
+  <!-- Toggle Sidebar Script -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const menuBtn = document.getElementById('menuBtn');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
 </body>
 </html>
