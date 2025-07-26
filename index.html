@@ -1,116 +1,149 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agent Saha</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100%;
-      background-color: white;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-      padding: 20px;
+      padding: 0;
       box-sizing: border-box;
-      transition: left 0.3s ease;
-      z-index: 1000;
-    }
-    .sidebar.open {
-      left: 0;
-    }
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      display: none;
-      z-index: 900;
-    }
-    .overlay.show {
-      display: block;
-    }
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 1100;
-      background: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    nav a {
-      display: block;
-      margin: 10px 0;
-      color: black;
-      text-decoration: none;
-    }
-    .logo {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-    main {
-      padding: 100px 20px 20px 20px;
-      max-width: 600px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 100px;
-    }
-    h1 {
-      color: #e53935;
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+    }body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+}
+
+.sidebar {
+  width: 180px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 15px;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: black;
+}
+
+.sidebar h1 span {
+  color: red;
+}
+
+.sidebar nav a {
+  display: block;
+  margin: 20px 0;
+  color: #111;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.main {
+  margin-left: 180px;
+  padding: 50px;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+  position: relative;
+}
+
+.hero .circle {
+  background: #ffe6e6;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #e53935;
+  line-height: 1.2;
+}
+
+.hero .amp {
+  font-size: 100px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: black;
+}
+
+.hero a {
+  margin: 10px;
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+section {
+  padding: 40px 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+section h3 {
+  color: #e53935;
+  margin-bottom: 10px;
+}
+
   </style>
-</head>
-<body>
-  <div class="overlay" onclick="toggleSidebar()"></div>
-  <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
-  <div class="sidebar" id="sidebar">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_Taekwondo.png" alt="Logo" class="logo" />
+</head><body>
+  <div class="sidebar">
+    <h1>st<span>.</span></h1>
     <nav>
       <a href="#work">work</a>
       <a href="#about">about</a>
       <a href="#contact">contact</a>
       <a href="#extra">extra</a>
     </nav>
-  </div>  <main>
-    <section id="work">
-      <h1>Work</h1>
-      <p>This section highlights Agent Saha’s featured projects and achievements.</p>
-    </section>
-    <section id="about">
-      <h1>About</h1>
-      <p>Agent Saha is a Political Scientist, Taekwondo Player, and IAS Officer.</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Taekwondo_punch.jpg" class="profile-img" alt="Taekwondo Punch" />
-    </section>
-    <section id="contact">
-      <h1>Contact</h1>
-      <p>Email: agent.saha@example.com</p>
-    </section>
-    <section id="extra">
-      <h1>Extra</h1>
-      <p>This is the new extra section for additional content or future expansion.</p>
-    </section>
-  </main>  <script>
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('open');
-      document.querySelector('.overlay').classList.toggle('show');
-    }
-  </script></body>
-</html>
+  </div>  <div class="main">
+    <div class="hero">
+      <div class="circle"></div>
+      <h2>Agent Saha is a</h2>
+      <h1>Political Scientist,<br />Taekwondo Player,<br />IAS Officer</h1>
+      <div class="amp">&</div>
+      <a href="#work">view work</a>
+      <a href="#about">view about</a>
+    </div><section id="work">
+  <h3>Work</h3>
+  <p>This section highlights Agent Saha’s featured projects and achievements.</p>
+</section>
+
+<section id="about">
+  <h3>About</h3>
+  <p>Agent Saha is a Political Scientist, Taekwondo Player, and IAS Officer.</p>
+  <p>Taekwondo<br>Punch</p>
+</section>
+
+<section id="contact">
+  <h3>Contact</h3>
+  <p>Email: rahulgisx@gmail.com</p>
+</section>
+
+<section id="extra">
+  <h3>Extra</h3>
+  <p>This is the new extra section for additional content or future expansion.</p>
+</section>
+
+  </div>
+</body></html>
