@@ -1,149 +1,179 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agent Saha</title>
+  <title>Agent Saha - Homepage</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #000;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fff;
+      color: #000;
+    }.container {
   display: flex;
+  flex-direction: row;
+  min-height: 100vh;
 }
 
 .sidebar {
-  width: 180px;
+  width: 160px;
   background: #fff;
   border-right: 1px solid #eee;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 30px 15px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .sidebar h1 {
+  margin: 0 0 20px 0;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 40px;
-  color: black;
 }
 
 .sidebar h1 span {
   color: red;
 }
 
-.sidebar nav a {
-  display: block;
-  margin: 20px 0;
-  color: #111;
+.sidebar a {
   text-decoration: none;
-  font-size: 16px;
+  color: #000;
+  margin: 10px 0;
 }
 
 .main {
-  margin-left: 180px;
-  padding: 50px;
-  width: 100%;
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .hero {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  height: 90vh;
-  text-align: center;
-  position: relative;
 }
 
-.hero .circle {
-  background: #ffe6e6;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  position: absolute;
-  z-index: -1;
+.hero-text {
+  max-width: 500px;
 }
 
 .hero h2 {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: normal;
 }
 
 .hero h1 {
-  font-size: 40px;
-  font-weight: bold;
-  color: #e53935;
+  font-size: 36px;
+  color: #e63946;
   line-height: 1.2;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  display: block;
 }
 
 .hero .amp {
-  font-size: 100px;
+  font-size: 64px;
   font-weight: bold;
-  margin: 20px 0;
-  color: black;
+  color: #000;
+  margin: 10px 0;
 }
 
-.hero a {
-  margin: 10px;
-  color: black;
-  text-decoration: underline;
-  font-weight: bold;
+.hero-image {
+  margin-right: 30px;
 }
 
-section {
-  padding: 40px 0;
-  max-width: 700px;
-  margin: 0 auto;
+.hero-image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-section h3 {
-  color: #e53935;
+.section {
+  margin-top: 60px;
+}
+
+.section h2 {
+  color: #e63946;
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+  .main {
+    padding: 20px;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-image {
+    margin: 0 0 20px 0;
+  }
+  .hero-text h1 {
+    text-align: center;
+  }
 }
 
   </style>
 </head><body>
-  <div class="sidebar">
-    <h1>st<span>.</span></h1>
-    <nav>
+  <div class="container">
+    <div class="sidebar">
+      <h1>st<span>.</span></h1>
       <a href="#work">work</a>
       <a href="#about">about</a>
       <a href="#contact">contact</a>
       <a href="#extra">extra</a>
-    </nav>
-  </div>  <div class="main">
-    <div class="hero">
-      <div class="circle"></div>
-      <h2>Agent Saha is a</h2>
-      <h1>Political Scientist,<br />Taekwondo Player,<br />IAS Officer</h1>
-      <div class="amp">&</div>
-      <a href="#work">view work</a>
-      <a href="#about">view about</a>
-    </div><section id="work">
-  <h3>Work</h3>
-  <p>This section highlights Agent Saha’s featured projects and achievements.</p>
-</section>
+    </div>
+    <div class="main">
+      <div class="hero">
+        <div class="hero-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Karate_punch.jpg/320px-Karate_punch.jpg" alt="Karate Punch">
+        </div>
+        <div class="hero-text">
+          <h2>Agent Saha is a</h2>
+          <h1>
+            <span>Political Scientist,</span>
+            <span>Taekwondo Player,</span>
+            <span>IAS Officer</span>
+          </h1>
+          <div class="amp">&</div>
+          <p><a href="#work">view work</a> &nbsp;&nbsp;&nbsp; <a href="#about">view about</a></p>
+        </div>
+      </div><div id="work" class="section">
+    <h2>Work</h2>
+    <p>This section highlights Agent Saha’s featured projects and achievements.</p>
+  </div>
 
-<section id="about">
-  <h3>About</h3>
-  <p>Agent Saha is a Political Scientist, Taekwondo Player, and IAS Officer.</p>
-  <p>Taekwondo<br>Punch</p>
-</section>
+  <div id="about" class="section">
+    <h2>About</h2>
+    <p>Agent Saha is a Political Scientist, Taekwondo Player, and IAS Officer.</p>
+    <p>Taekwondo<br>Punch</p>
+  </div>
 
-<section id="contact">
-  <h3>Contact</h3>
-  <p>Email: rahulgisx@gmail.com</p>
-</section>
+  <div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: agent.saha@example.com</p>
+  </div>
 
-<section id="extra">
-  <h3>Extra</h3>
-  <p>This is the new extra section for additional content or future expansion.</p>
-</section>
+  <div id="extra" class="section">
+    <h2>Extra</h2>
+    <p>This is the new extra section for additional content or future expansion.</p>
+  </div>
+</div>
 
   </div>
 </body></html>
