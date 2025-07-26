@@ -2,139 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🎯 My Life Target</title>
+  <title>Rahul | Personal Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      background-color: #0f0f1a;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #ffffff;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      color: #d3a2ff;
+    /* RESET & BASE */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #0d0d0d; color: #f5f5f5; line-height:1.6; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(to right, #2e026d, #0f0f0f);
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.5em;
+      padding: 2rem 1rem;
     }
-    .search-filter {
+    header h1 { font-size: 2.5rem; color: #d4aaff; }
+    header p { margin-top: 0.5rem; color: #bbb; }
+
+    /* NAV */
+    nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 30px;
+      gap: 1rem;
+      background: #1a1a1a;
+      padding: 0.75rem;
     }
-    .search-filter input, .search-filter select {
-      padding: 10px;
-      font-size: 1em;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-    }
-    .target-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .target-card {
-      background: #1a1a2e;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 0 10px #d3a2ff44;
-      transition: transform 0.3s ease;
-    }
-    .target-card:hover {
-      transform: scale(1.03);
-    }
-    .target-card h3 {
-      color: #a7f3d0;
-      margin-bottom: 10px;
-    }
-    .target-card p {
-      margin: 5px 0;
-      font-size: 0.95em;
-    }
-    .target-card a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #a855f7;
-      color: white;
-      border-radius: 8px;
+    nav a {
+      color: #d4aaff;
       text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
+      font-weight: 600;
     }
-    .target-card a:hover {
-      background: #9333ea;
+    nav a:hover { color: #fff; }
+
+    /* SECTIONS */
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(46,2,109,0.3);
+    }
+    section h2 {
+      color: #d4aaff;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.5rem;
+    }
+
+    /* ACTIVITY CARDS */
+    .card {
+      background: #262626;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #a855f7;
+      border-radius: 4px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #111;
+      color: #777;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:600px) {
+      header h1 { font-size:2rem; }
+      nav { flex-wrap:wrap; }
     }
   </style>
 </head>
 <body>
 
-  <h1>🎯 My Life Target</h1>
+  <!-- HEADER -->
+  <header>
+    <h1>Rahul Kumar</h1>
+    <p>Political Science Honours | UPSC Aspirant | GodX Mission Founder</p>
+  </header>
 
-  <div class="search-filter">
-    <input type="text" id="searchBar" placeholder="🔍 Search your problems...">
-    <select id="categoryFilter">
-      <option value="">All Categories</option>
-      <option value="personal">🧠 Personal</option>
-      <option value="health">💪 Health</option>
-      <option value="education">📚 Education</option>
-      <option value="business">🏢 Business</option>
-      <!-- Add more categories as needed -->
-    </select>
-  </div>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#targets">Life Targets</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <div class="target-container" id="targetList">
-    <!-- Example Entry Start -->
-    <div class="target-card" data-category="education">
-      <h3>📌 Target 1 : Close Voting System </h3>
-      <p>💡 Solution: By Introduce Grade System.</p>
-      <a href="https://docs.google.com/document/d/1rD60LPh4Ep4iLBCBKo5MBtFVOqf2BVQb8Bo27iD0gzk/edit?usp=drivesdk" target="_blank">📄 Download Thesis</a>
+  <!-- ABOUT ME -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Rahul, a driven Political Science honours student at Malda College, green-belt in Taekwondo, and founder of the GodX mission.  
+      I transform challenges into milestones and prepare for UPSC 2028 while building my vision: PROB Empire and Elite Card platform.
+    </p>
+  </section>
+
+  <!-- LIFE TARGETS -->
+  <section id="targets">
+    <h2>My Life Targets</h2>
+    <div class="card">
+      <strong>🎯 Target #1:</strong> Crack UPSC and become an IAS officer by 2028.
     </div>
-    <!-- Example Entry End -->
-<div class="target-card" data-category="education">
-  <h3>📌 Problem 2 : Impliment Point System in Politics.</h3>
-  <p>💡 Solution: By Introduce Grade System.</p>
-  <a href="Google Drive Link" target="_blank">📄 Download Thesis</a>
-</div>
- <div class="target-card" data-category="education">
-  <h3>📌 Problem 3 : IAS become real Government. (SUB)</h3>
-  <p>💡 Solution: By Introduce Grade System.</p>
-  <a href="Google Drive Link" target="_blank">📄 Download Thesis</a>
-</div>
-    <!-- You can copy-paste the block above and change content to add more -->
-  </div>
+    <div class="card">
+      <strong>🎯 Target #2:</strong> Establish PROB Multinational Empire.
+    </div>
+    <div class="card">
+      <strong>🎯 Target #3:</strong> Launch Elite Card luxury status platform.
+    </div>
+    <div class="card">
+      <strong>🎯 Target #4:</strong> Master Japanese political system with a PhD.
+    </div>
+    <div class="card">
+      <strong>🎯 Target #5:</strong> Achieve Black Belt in Taekwondo by 2027.
+    </div>
+  </section>
 
-  <script>
-    const searchBar = document.getElementById('searchBar');
-    const categoryFilter = document.getElementById('categoryFilter');
-    const cards = document.querySelectorAll('.target-card');
+  <!-- ACTIVITY LOG -->
+  <section id="activities">
+    <h2>Activity Timeline</h2>
+    <div class="card">
+      <strong>2025:</strong> Ranked 2nd in Political Science Honours.
+    </div>
+    <div class="card">
+      <strong>2025:</strong> Green Belt in Taekwondo (record 4 months).
+    </div>
+    <div class="card">
+      <strong>2024:</strong> Built Elite Card Flutter app with Firebase.
+    </div>
+    <div class="card">
+      <strong>2023-24:</strong> Created IBC Party NGO website & content.
+    </div>
+    <!-- Add more as you go -->
+  </section>
 
-    function filterCards() {
-      const search = searchBar.value.toLowerCase();
-      const category = categoryFilter.value;
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>✉️ Email: your.email@example.com</p>
+    <p>📍 Malda, West Bengal, India</p>
+  </section>
 
-      cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        const cardCategory = card.getAttribute('data-category');
-
-        const matchesSearch = text.includes(search);
-        const matchesCategory = !category || cardCategory === category;
-
-        if (matchesSearch && matchesCategory) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    searchBar.addEventListener('input', filterCards);
-    categoryFilter.addEventListener('change', filterCards);
-  </script>
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Rahul Kumar — Powered by GodX Mission
+  </footer>
 
 </body>
 </html>
