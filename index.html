@@ -1,152 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Rahul | Personal Profile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* RESET & BASE */
-    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
-    body { background: #0d0d0d; color: #f5f5f5; line-height:1.6; }
+import React from "react";
 
-    /* HEADER */
-    header {
-      background: linear-gradient(to right, #2e026d, #0f0f0f);
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 { font-size: 2.5rem; color: #d4aaff; }
-    header p { margin-top: 0.5rem; color: #bbb; }
+export default function ProfilePage() {
+  return (
+    <div className="min-h-screen flex bg-white font-sans">
+      {/* Sidebar */}
+      <div className="w-1/5 flex flex-col items-center justify-center p-6">
+        <div className="text-4xl font-bold text-black">
+          st<span className="text-red-500">.</span>
+        </div>
+        <div className="mt-12 space-y-4 text-lg text-black">
+          <a href="#work" className="hover:underline">work</a>
+          <a href="#about" className="hover:underline">about</a>
+          <a href="#contact" className="hover:underline">contact</a>
+        </div>
+      </div>
 
-    /* NAV */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background: #1a1a1a;
-      padding: 0.75rem;
-    }
-    nav a {
-      color: #d4aaff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover { color: #fff; }
+      {/* Main Content */}
+      <div className="w-4/5 flex items-center justify-center relative p-10">
+        {/* Light red circle with image */}
+        <div className="absolute w-96 h-96 bg-red-100 rounded-full -left-28 top-1/2 transform -translate-y-1/2 overflow-hidden flex items-center justify-center shadow-md">
+          <img
+            src="rahul-taekwondo-photo.jpg" // Rename your uploaded file accordingly
+            alt="Profile"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-    /* SECTIONS */
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: #1a1a1a;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(46,2,109,0.3);
-    }
-    section h2 {
-      color: #d4aaff;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #444;
-      padding-bottom: 0.5rem;
-    }
+        {/* Text content */}
+        <div className="ml-72 z-10">
+          <p className="text-xl text-gray-800 mb-2">Agent Saha is a</p>
+          <h1 className="text-5xl font-extrabold text-red-500 leading-tight">
+            Political Scientist,<br />
+            Taekwondo Player,<br />
+            IAS Officer
+          </h1>
+          <div className="text-[130px] font-black leading-none text-black -mt-10">
+            &
+          </div>
 
-    /* ACTIVITY CARDS */
-    .card {
-      background: #262626;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid #a855f7;
-      border-radius: 4px;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #111;
-      color: #777;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width:600px) {
-      header h1 { font-size:2rem; }
-      nav { flex-wrap:wrap; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <h1>Rahul Kumar</h1>
-    <p>Political Science Honours | UPSC Aspirant | GodX Mission Founder</p>
-  </header>
-
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#targets">Life Targets</a>
-    <a href="#activities">Activities</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- ABOUT ME -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm Rahul, a driven Political Science honours student at Malda College, green-belt in Taekwondo, and founder of the GodX mission.  
-      I transform challenges into milestones and prepare for UPSC 2028 while building my vision: PROB Empire and Elite Card platform.
-    </p>
-  </section>
-
-  <!-- LIFE TARGETS -->
-  <section id="targets">
-    <h2>My Life Targets</h2>
-    <div class="card">
-      <strong>🎯 Target #1:</strong> Crack UPSC and become an IAS officer by 2028.
+          {/* Links */}
+          <div className="flex space-x-6 mt-6 text-sm">
+            <a href="#work" className="underline font-medium">view work</a>
+            <a href="#about" className="underline font-medium">view about</a>
+          </div>
+          <p className="text-gray-400 mt-2 text-sm">
+            or continue scrolling for featured projects,<br /> skills, and more!
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <strong>🎯 Target #2:</strong> Establish PROB Multinational Empire.
-    </div>
-    <div class="card">
-      <strong>🎯 Target #3:</strong> Launch Elite Card luxury status platform.
-    </div>
-    <div class="card">
-      <strong>🎯 Target #4:</strong> Master Japanese political system with a PhD.
-    </div>
-    <div class="card">
-      <strong>🎯 Target #5:</strong> Achieve Black Belt in Taekwondo by 2027.
-    </div>
-  </section>
-
-  <!-- ACTIVITY LOG -->
-  <section id="activities">
-    <h2>Activity Timeline</h2>
-    <div class="card">
-      <strong>2025:</strong> Ranked 2nd in Political Science Honours.
-    </div>
-    <div class="card">
-      <strong>2025:</strong> Green Belt in Taekwondo (record 4 months).
-    </div>
-    <div class="card">
-      <strong>2024:</strong> Built Elite Card Flutter app with Firebase.
-    </div>
-    <div class="card">
-      <strong>2023-24:</strong> Created IBC Party NGO website & content.
-    </div>
-    <!-- Add more as you go -->
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>✉️ Email: your.email@example.com</p>
-    <p>📍 Malda, West Bengal, India</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2025 Rahul Kumar — Powered by GodX Mission
-  </footer>
-
-</body>
-</html>
+  );
+}
